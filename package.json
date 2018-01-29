@@ -1,0 +1,22 @@
+{
+  "name": "learner",
+  "version": "1.0.0",
+  "description": "learn a new foo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oniemela/learner.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oniemela/learner/issues"
+  },
+  "homepage": "https://github.com/oniemela/learner#readme",
+  "dependencies": {
+    "angular": "^1.6.8"
+  }
+}
