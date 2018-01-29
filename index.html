@@ -6,21 +6,38 @@
 		<title>Learner</title>
 		<link rel="stylesheet" href="lissu.css" media="screen" />
 	</head>
-	<body>
-		<div ng-app="learner">
-			<nav>
-				<ul>
-					<li><b>Learner</b></li>
-					<li>Fill the content</li>
-				</ul>
-			</nav>
-		
+	<body ng-app="learner" ng-controller="fillerController">
+		<nav>
+			<ul>
+				<li>Learner</li>
+			</ul>
+		</nav>
+	
+		<section>
 			<article>
+				<h2>What is the Learner?</h2>
 				Learner is a memorizing app. Fill the content you want to memorize - Learner will ask in random.
 			</article>
+		</section>
+		
+		<section>
+			Learner will only save the data you fill to your browser's local storage. Make sure you save the data if you wish to use it later again.
+		</section>
+		
+		<form>
+			<label>Name the learned content (so that you can recognize it later)</label>
+			<input type="text" ng-model="learnedName" required placeholder="eg. Finnish, beginner, vol 1"/>
 			
-		</div>
-
+			<label>Fill the learned data - check the box for example</label>
+			<textarea ng-model="filledData"></textarea>
+			<button ng-click="fill()" class="green">Start learning</button>
+		</form>
+		
+		<section ng-show="begin">
+			<h1>Begin learning!</h1>
+		</section>
+			
 		<script src="node_modules/angular/angular.min.js"></script>
+		<script src="app.js"></script>
 	</body>
 </html>
